@@ -35,6 +35,7 @@ int main()
     getline(stream_line2, name_of_n, ';');
     getline(stream_line2, value_of_n, ';');
     fout <<name_of_S<< " = "<<fixed << setprecision(2) << value_of_S_in_double <<", "<< name_of_n<<" = "<< value_of_n<<endl;
+    cout <<name_of_S<< " = "<<fixed << setprecision(2) << value_of_S_in_double <<", "<< name_of_n<<" = "<< value_of_n<<endl;
     getline(ifs, line);
     stringstream stream_line3(line);
     string name_of_w;
@@ -65,13 +66,19 @@ int main()
         i++;
     }
     fout << name_of_w << " = ";
+    cout << name_of_w << " = ";
     write_in_outfile(fout, w, num_row);
-    fout << name_of_r << " = ";;
+    fout << name_of_r << " = ";
+    cout << name_of_r << " = ";
     write_in_outfile(fout, r, num_row);
+    print(w, num_row);
+    print(r, num_row);
     double rate_of_return = find_rate(w,r,num_row);
     fout << "Rate of return of the portfolio: " <<fixed << setprecision(4) << rate_of_return << endl;
+    cout << "Rate of return of the portfolio: " <<fixed << setprecision(4) << rate_of_return << endl;
     double V = find_V(w,r,value_of_S_in_double,num_row);
     fout << "V: " << fixed << setprecision(2) << V << endl;
+    cout << "V: " << fixed << setprecision(2) << V << endl;
     delete [] w;
     delete [] r;
     ifs.close();

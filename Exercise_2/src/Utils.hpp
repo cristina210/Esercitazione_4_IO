@@ -15,6 +15,11 @@ size_t count(const string& filename);
 // size_arr : size of the array
 void write_in_outfile(ofstream& filename, const double* const &arr, const size_t size_arr);
 
+// "print" is a function that prints an array to the screen
+// arr : pointer that points to the beginning of array
+// size_arr : size of the array
+void print(const double* const &arr, const size_t size_arr);
+
 // "find_V" is a function which calculates the final value of the portfolio
 // w: pointer that points to the beginning of allocated memory in which the fractions of S over time are stored
 // r: pointer that points to the beginning of allocated memory in which the rates of return over time are stored

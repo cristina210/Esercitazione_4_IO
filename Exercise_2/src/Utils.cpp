@@ -28,6 +28,17 @@ void write_in_outfile(ofstream& fout, const double* const &arr, const size_t siz
     fout << "]"<<endl;
 }
 //
+void print(const double* const &arr, const size_t size_arr){
+    cout << "[";
+    unsigned int i = 0;
+    while (i<size_arr){
+        cout <<" "<<arr[i]<<" ";
+        i=i+1;
+    }
+    cout << "]"<<endl;
+
+}
+//
 double find_V(const double* const w,const double* const r, double s, const size_t size_arr){
     double V = 0 ;
     unsigned int i = 0;
